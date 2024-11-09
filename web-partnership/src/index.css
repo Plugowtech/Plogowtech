@@ -31,10 +31,15 @@
   h3,
   h4,
   h5,
-  h6,
-  p {
-    @apply subpixel-antialiased;
+  h6
+  {
+    @apply subpixel-antialiased tracking-widest;   
   }
+
+  p{
+     @apply subpixel-antialiased tracking-wider leading-8 break-normal;
+  }
+
 
   a{
     text-decoration: none;
