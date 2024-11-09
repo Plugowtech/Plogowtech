@@ -107,12 +107,14 @@
   .btn-inputs {
     background-color: var(--btn-primary-color);
     color: var(--letter-color);
-    width: 844px;
-    height: 73px;
+    width: 500px;
+    height: 45px;
     border-radius: var(--border-radius);
     cursor: pointer;
     font-weight: bold;
     font-size: 28px;
+     margin-top: 40px;
+     margin-bottom: 40px;
   }
 
   .btn-inputs:hover {
@@ -124,13 +126,13 @@
     position: relative;
     display: inline-block;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   .input-container input {
     background-color: transparent;
-    width: 844px;
-    height: 55px;
+    width: 500px;
+    height: 45px;
     color: var(--letter-color);
     border: 1px solid var(--border-input-color);
     padding-left: 10px;
@@ -139,7 +141,7 @@
 
   .input-label {
     position: absolute;
-    left: 12px;
+    left: 8px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 16px;
@@ -152,7 +154,7 @@
     top: 0;
     font-size: 18px;
     color: var(--letter-color-primary);
-    padding: 0 2px;
+   
     transform: translateY(-110%);
   }
 }
