@@ -5,9 +5,9 @@ import logoPlaceholder from "../assets/logoPlaceholder.png";
 
 export const CompanyRegistration = () => {
   return (
-    <section className="bg-[var(--background-primary)] m-auto mt-7  flex flex-col justify-center items-center">
+    <section className="bg-[var(--background-primary)] w-[500px] m-auto mt-7  flex flex-col justify-center items-center">
       <h3 className="text-3xl font-bold">Cadastro de Empresa</h3>
-      <form className="flex flex-col justify-center items-center">
+      <form className="w-full flex flex-col justify-center items-center">
         <InputImage
           image={logoPlaceholder}
           inputImageLabel={"Logo da Empresa"}

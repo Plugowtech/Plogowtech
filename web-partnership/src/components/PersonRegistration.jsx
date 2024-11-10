@@ -4,11 +4,11 @@ import userProfile from "../assets/userProfile.jpg";
 
 export const PersonRegistration = () => {
 return (
-    <section className="bg-[var(--background-primary)] m-auto mt-7  flex flex-col justify-center items-center">
+    <section className="bg-[var(--background-primary)] w-[500px] m-auto mt-7  flex flex-col justify-center items-center">
       <h3 className="text-3xl font-bold">
        Cadastro
       </h3>
-    <form className="flex flex-col justify-center items-center">
+    <form className="w-full flex flex-col justify-center items-center">
         <InputImage image={userProfile}  inputImageLabel={"Foto de perfil"} />
         <Input type="text" name="name" label={"Seu nome"} />
         <Input type="text" name="companyName" label={"Nome da Empresa"} />
