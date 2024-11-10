@@ -1,10 +1,12 @@
 
+
 export const Input = ({ type, name, label, value, onChange }) => {
   return (
     <div className="input-container">
       <input
         className="input"
         type={type}
+        id={name}
         name={name}
         value={value}
         onChange={onChange}
