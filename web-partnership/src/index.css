@@ -21,7 +21,6 @@
 
   body {
     @apply h-full w-full overflow-x-hidden antialiased;
-    background-color: var(--background-primary);
     color: var(--letter-color);
     text-rendering: optimizeLegibility;
   }
