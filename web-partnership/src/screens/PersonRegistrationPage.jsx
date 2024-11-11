@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const PersonRegistration = () => {
+export const PersonRegistrationPage = () => {
   return (
     <div>PersonRegistration</div>
   )
