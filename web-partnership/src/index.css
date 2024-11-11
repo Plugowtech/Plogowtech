@@ -23,6 +23,7 @@
     @apply h-full w-full overflow-x-hidden antialiased;
     color: var(--letter-color);
     text-rendering: optimizeLegibility;
+    background-color: var(--background-primary)
   }
 
   h1,
@@ -36,7 +37,7 @@
   }
 
   p{
-     @apply subpixel-antialiased tracking-wider leading-8 break-normal;
+     @apply subpixel-antialiased tracking-wider leading-9 break-normal;
   }
 
 
@@ -44,6 +45,11 @@
     text-decoration: none;
     color: var(--letter-color);
     font-size: 22px;
+  }
+
+  a:hover{
+    text-decoration: underline;
+    color: var(--background-secondary);
   }
 }
 

@@ -1,0 +1,27 @@
+import React from "react";
+import { CardHow } from "./CardHow";
+import { dataHowItWork } from "../mocks/howItWork.mock.js";
+
+export const HowItWork = () => {
+  return (
+    <section className="bg-[var(--background-secondary)] w-full mt-2 pb-7 pt-7 flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center">
+        <h3 className="text-6xl font-bold">Como funciona?</h3>
+        <p className="text-2xl mt-3 w-[70%] text-center">
+          No<strong> PARTNERSHIP </strong>, os usuários têm acesso a uma série
+          de funcionalidades para otimizar suas experiências e recompensas:
+        </p>
+      </div>
+      <div className="flex flex-row flex-wrap gap-[60px] mt-[50px] w-[80%]">
+        {dataHowItWork?.map((item) => (
+          <CardHow
+            key={item.id}
+            image={item.img}
+            title={item.title}
+            description={item.description}
+          />
+        ))}
+      </div>
+    </section>
+  );
+};
