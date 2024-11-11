@@ -1,7 +1,19 @@
-import React from 'react'
+import { PersonRegistration } from "../components/PersonRegistration";
+import BgRegistration from "../assets/bg-registration.svg";
 
 export const PersonRegistrationPage = () => {
   return (
-    <div>PersonRegistration</div>
-  )
-}
+    <main
+      className="w-full"
+      style={{
+        backgroundImage: `url(${BgRegistration})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
+      <div className="pt-[100px] pb-[100px]">
+        <PersonRegistration />
+      </div>
+    </main>
+  );
+};

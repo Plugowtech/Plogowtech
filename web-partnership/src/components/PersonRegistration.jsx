@@ -4,7 +4,7 @@ import userProfile from "../assets/userProfile.jpg";
 
 export const PersonRegistration = () => {
 return (
-    <section className="bg-[var(--background-primary)] w-[500px] m-auto mt-7  flex flex-col justify-center items-center">
+    <section className="bg-[var(--background-primary)] opacity-80 w-[600px] m-auto pt-7  flex flex-col justify-center items-center">
       <h3 className="text-3xl font-bold">
        Cadastro
       </h3>
