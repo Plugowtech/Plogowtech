@@ -14,16 +14,6 @@ export const AnimationLogin =({classNameLogin}) =>{
         <div className={styles.blubb6}></div>
         <div className={styles.blubb7}></div>
         <div className={styles.blubb8}></div>
-        <div className={styles.sparkle1}></div>
-        <div className={styles.sparkle2}></div>
-        <div className={styles.sparkle3}></div>
-        <div className={styles.sparkle4}></div>
-        <div className={styles.sparkle5}></div>
-        <div className={styles.sparkle6}></div>
-        <div className={styles.sparkle7}></div>
-        <div className={styles.sparkle8}></div>
-        <div className={styles.sparkle9}></div>
-        <div className={styles.sparkle10}></div>
       </div>
     </div>
   );

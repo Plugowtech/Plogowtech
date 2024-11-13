@@ -1,5 +1,6 @@
 import bgHeader from "../assets/bg-header.png";
 import Bag from '../assets/bag.svg'
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -39,8 +40,9 @@ export const Header = () => {
               fortalecer parcerias entre profissionais, consultores e nossas
               lojas parceiras.
             </p>
-
-            <button className="btn-home mt-5">Quero fazer parte</button>
+            <Link to="/choosing-account" className="w-full flex">
+               <button className="btn-home mt-5">Quero fazer parte</button>
+            </Link>
           </div>
         </div>
         <div className="relative">

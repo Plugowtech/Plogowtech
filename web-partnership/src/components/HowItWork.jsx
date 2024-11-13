@@ -1,6 +1,7 @@
 import React from "react";
 import { CardHow } from "./CardHow";
 import { dataHowItWork } from "../mocks/howItWork.mock.js";
+import { Link } from "react-router-dom";
 
 export const HowItWork = () => {
   return (
@@ -22,6 +23,9 @@ export const HowItWork = () => {
           />
         ))}
       </div>
+      <Link to={"/choosing-account"}>
+        <button className="bg-black w-[100%] p-5 h-[80px] mt-14 mb-14 text-white font-bold text-2xl rounded-xl hover:scale-105 transition-transform duration-200">Quero fazer parte</button>
+      </Link>
     </section>
   );
 };

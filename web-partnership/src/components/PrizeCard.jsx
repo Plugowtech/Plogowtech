@@ -1,8 +1,8 @@
-import React from 'react'
+import { Link } from "react-router-dom";
 
-export const PrizeCard = ({title, image, className}) => {
-    const basicStyle =
-      "w-[335px] min-h-[582px] m-auto pt-3 pl-4 pr-4 rounded-xl flex flex-col items-center";
+export const PrizeCard = ({ title, image, className }) => {
+  const basicStyle =
+    "w-[335px] min-h-[582px] m-auto pt-3 pl-4 pr-4 rounded-xl flex flex-col items-center";
   return (
     <div
       className={`${className} ${basicStyle}`}
@@ -22,7 +22,9 @@ export const PrizeCard = ({title, image, className}) => {
       />
       <h4 className="text-4xl mt-7 font-bold">{title}</h4>
       <p className="mt-5 text-lg pb-5"></p>
-      <button className="btn-inputs">Participar</button>
+      <Link to="/choosing-account" className="w-full flex justify-center">
+        <button className="btn-inputs">Participar</button>
+      </Link>
     </div>
   );
-}
+};
