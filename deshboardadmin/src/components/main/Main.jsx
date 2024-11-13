@@ -1,5 +1,5 @@
-import hello from "../../assets/hello.jpg";
-// import Chart from '../charts/Chart';
+import hello from "../../assets/hello.png";
+import Chart from "../charts/Chart";
 import "./Main.css";
 
 const Main = () => {
@@ -39,7 +39,7 @@ const Main = () => {
           </div>
 
           <div className="card">
-            <i className="fa fa-file-bars fa-2x text-green"></i>
+            <i className="fa fa-solid fa-bars fa-2x text-green"></i>
             <div className="card_inner">
               <p className="text-primary-p">Categorias</p>
               <span className="font-bold text-title">40</span>
@@ -56,11 +56,10 @@ const Main = () => {
               </div>
               <i className="fa fa-usd"></i>
             </div>
-            <Chard />
+            <Chart />
           </div>
-        </div>
 
-        <div className="charts__right">
+          <div className="charts__right">
           <div className="charts__right__title">
             <div>
               <h1>Daily Reports</h1>
@@ -89,6 +88,9 @@ const Main = () => {
               <h1>Banco de dados</h1>
               <p>R$180</p>
             </div>
+        </div>
+
+        
           </div>
         </div>
       </div>
