@@ -1,6 +1,6 @@
 import './Sidebar.css';
 import logo from '../../assets/logo.svg';
-// import user from "../assets/userProfile.jpg";
+
 
 const Sidebar = ({sidebarOpen, closeSidebar }) => {
     return (
