@@ -2,7 +2,7 @@
 main {
     background: #f3f4f6;
     grid-area: main;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .main__container{
@@ -16,7 +16,7 @@ main {
 
 .main__title > img {
     max-height: 100px;
-    object_fit: contain;
+    object-fit: contain;
     margin-right: 20px;
 }
 
@@ -32,14 +32,14 @@ main {
     color: #a5aaad;
 }
 
-.main_cards {
+.main__cards {
     display: grid;
-    grid-template-colums: reapet(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin: 20px 0;
 }
 
-.cards{
+.card{
     display: flex;
     flex-direction: column;
     justify-content: column;
@@ -62,7 +62,7 @@ main {
 
 .charts {
     display: grid;
-    grid-template-column: reapet(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-top: 50px;
 }
@@ -181,7 +181,57 @@ main {
     font-size: 14px;
 }
 
-@media only screen and (max-widht: 855px){
+.cards__analise__pedidos {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.cards__analise__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cards__analise__title > div > h1 {
+    font_size: 24px;
+    color: #FF9000;
+    margin_bottom: 5px;
+    padding: 15px;
+}
+
+.charts__left__title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cards__analise__title > div > p {
+    font-size: 14px;
+    color: #a5aaad;
+    font-weight: 700;
+    padding: 15px;
+}
+
+.card__analise {
+    display: grid;
+    grid-template-colums: reapet(1);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card1 {
+    background: #d1ecf1;
+    color: #35a4ba;
+    text-align: center;
+    padding: 25px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+@media only screen and (max-width: 855px){
     .main__cards {
         grid-template-colums: 1fr;
         gap: 10px;

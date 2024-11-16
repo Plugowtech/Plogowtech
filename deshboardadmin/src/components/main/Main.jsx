@@ -23,7 +23,7 @@ const Main = () => {
           </div>
 
           <div className="card">
-            <i className="fa fa-file-money fa-2x text-red"></i>
+            <i className="fa fa-solid fa-money-bills fa-2x text-red"></i>
             <div className="card_inner">
               <p className="text-primary-p">Pagamentos</p>
               <span className="font-bold text-title">R$2.467</span>
@@ -31,7 +31,7 @@ const Main = () => {
           </div>
 
           <div className="card">
-            <i className="fa fa-file-archive fa-2x text-yellow"></i>
+            <i className="fa fa-solid fa-gift fa-2x text-yellow"></i>
             <div className="card_inner">
               <p className="text-primary-p">Premiações</p>
               <span className="font-bold text-title">R$2.467</span>
@@ -60,39 +60,51 @@ const Main = () => {
           </div>
 
           <div className="charts__right">
-          <div className="charts__right__title">
-            <div>
-              <h1>Daily Reports</h1>
-              <p>Floripa, Santa Catarina, BR</p>
-            </div>
-            <i className="fa fa-area-chart"></i>
-          </div>
-
-          <div className="charts__right__cards">
-            <div className="card1">
-              <h1>Lucro</h1>
-              <p>R$2500</p>
+            <div className="charts__right__title">
+              <div>
+                <h1>Daily Reports</h1>
+                <p>Floripa, Santa Catarina, BR</p>
+              </div>
+              <i className="fa fa-area-chart"></i>
             </div>
 
-            <div className="card2">
-              <h1>Pagamentos</h1>
-              <p>R$250</p>
-            </div>
+            <div className="charts__right__cards">
+              <div className="card1">
+                <h1>Lucro</h1>
+                <p>R$2500</p>
+              </div>
 
-            <div className="card3">
-              <h1>Custos de Hospedagem</h1>
-              <p>R$150</p>
-            </div>
+              <div className="card2">
+                <h1>Pagamentos</h1>
+                <p>R$250</p>
+              </div>
 
-            <div className="card4">
-              <h1>Banco de dados</h1>
-              <p>R$180</p>
-            </div>
-        </div>
+              <div className="card3">
+                <h1>Custos de Hospedagem</h1>
+                <p>R$150</p>
+              </div>
 
-        
+              <div className="card4">
+                <h1>Banco de dados</h1>
+                <p>R$180</p>
+              </div>
+            </div>
           </div>
         </div>
+        <div className="cards__analise__pedidos">
+            <div className="cards__analise__title">
+              <div>
+                <h1>Pedidos pendentes para análise</h1>
+                <p>Análise dos últimos pedidos</p>
+                </div>
+            </div>
+            <div className="card__analise">
+              <div className="card__analise__01">
+                  <h1>Banco de dados</h1>
+                  <p>R$180</p>
+              </div>
+            </div>
+          </div>
       </div>
     </main>
   );
