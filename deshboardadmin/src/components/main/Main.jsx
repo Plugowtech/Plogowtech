@@ -1,110 +1,84 @@
+
+// src/componentes/Main.jsx
+import React, { useEffect, useState } from "react";
 import hello from "../../assets/hello.png";
-import Chart from "../charts/Chart";
+import Card from "../cards/Card";
+import ChartSection from "../charts/ChartSection";
 import "./Main.css";
 
 const Main = () => {
+  // Estado para armazenar os dados do backend
+  const [dashboardData, setDashboardData] = useState(null);
+
+  // Simulação de fetch para obter dados do backend
+  useEffect(() => {
+    // Aqui você pode substituir pelo fetch da sua API
+    const fetchData = async () => {
+      const data = {
+        greeting: "Olá Asaph",
+        cards: [
+          { iconClass: "fa fa-file-text", title: "Análise de pedidos", value: 578, colorClass: "text-lightblue" },
+          { iconClass: "fa fa-money-bills", title: "Pagamentos", value: "R$2.467", colorClass: "text-red" },
+          { iconClass: "fa fa-gift", title: "Premiações", value: "R$2.467", colorClass: "text-yellow" },
+          { iconClass: "fa fa-bars", title: "Categorias", value: 40, colorClass: "text-green" },
+        ],
+        reports: [
+          { title: "Lucro", value: "R$2500" },
+          { title: "Pagamentos", value: "R$250" },
+          { title: "Custos de Hospedagem", value: "R$150" },
+          { title: "Banco de dados", value: "R$180" },
+        ],
+      };
+      setDashboardData(data);
+    };
+    fetchData();
+  }, []);
+
+  // Renderizando condicionalmente apenas após os dados estarem disponíveis
+  if (!dashboardData) return <p>Carregando...</p>;
+
   return (
     <main>
       <div className="main__container">
+        {/* Saudações */}
         <div className="main__title">
           <img src={hello} alt="hello" />
           <div className="main__greeting">
-            <h1>Olá Asaph</h1>
-            <p>Bem vindo ao seu painel</p>
+            <h1>{dashboardData.greeting}</h1>
+            <p>Bem-vindo ao seu painel</p>
           </div>
         </div>
+
+        {/* Cartões Dinâmicos */}
         <div className="main__cards">
-          <div className="card">
-            <i className="fa fa-file-text fa-2x text-lightblue"></i>
-            <div className="card_inner">
-              <p className="text-primary-p">Análise de pedidos</p>
-              <span className="font-bold text-title">578</span>
-            </div>
-          </div>
-
-          <div className="card">
-            <i className="fa fa-solid fa-money-bills fa-2x text-red"></i>
-            <div className="card_inner">
-              <p className="text-primary-p">Pagamentos</p>
-              <span className="font-bold text-title">R$2.467</span>
-            </div>
-          </div>
-
-          <div className="card">
-            <i className="fa fa-solid fa-gift fa-2x text-yellow"></i>
-            <div className="card_inner">
-              <p className="text-primary-p">Premiações</p>
-              <span className="font-bold text-title">R$2.467</span>
-            </div>
-          </div>
-
-          <div className="card">
-            <i className="fa fa-solid fa-bars fa-2x text-green"></i>
-            <div className="card_inner">
-              <p className="text-primary-p">Categorias</p>
-              <span className="font-bold text-title">40</span>
-            </div>
-          </div>
+          {dashboardData.cards.map((card, index) => (
+            <Card
+              key={index}
+              iconClass={card.iconClass}
+              title={card.title}
+              value={card.value}
+              colorClass={card.colorClass}
+            />
+          ))}
         </div>
 
+        {/* Seção de Gráficos */}
         <div className="charts">
-          <div className="charts__left">
-            <div className="charts__left__title">
-              <div>
-                <h1>Daily Reports</h1>
-                <p>Floripa, Santa Catarina, BR</p>
-              </div>
-              <i className="fa fa-usd"></i>
-            </div>
-            <Chart />
-          </div>
+          <ChartSection
+            title="Daily Reports"
+            location="Floripa, Santa Catarina, BR"
+            iconClass="fa fa-usd"
+          />
 
-          <div className="charts__right">
-            <div className="charts__right__title">
-              <div>
-                <h1>Daily Reports</h1>
-                <p>Floripa, Santa Catarina, BR</p>
+          <div className="charts__right__cards">
+            {dashboardData.reports.map((report, index) => (
+              <div key={index} className={`card${index + 1}`}>
+                <h1>{report.title}</h1>
+                <p>{report.value}</p>
               </div>
-              <i className="fa fa-area-chart"></i>
-            </div>
-
-            <div className="charts__right__cards">
-              <div className="card1">
-                <h1>Lucro</h1>
-                <p>R$2500</p>
-              </div>
-
-              <div className="card2">
-                <h1>Pagamentos</h1>
-                <p>R$250</p>
-              </div>
-
-              <div className="card3">
-                <h1>Custos de Hospedagem</h1>
-                <p>R$150</p>
-              </div>
-
-              <div className="card4">
-                <h1>Banco de dados</h1>
-                <p>R$180</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-        <div className="cards__analise__pedidos">
-            <div className="cards__analise__title">
-              <div>
-                <h1>Pedidos pendentes para análise</h1>
-                <p>Análise dos últimos pedidos</p>
-                </div>
-            </div>
-            <div className="card__analise">
-              <div className="card__analise__01">
-                  <h1>Banco de dados</h1>
-                  <p>R$180</p>
-              </div>
-            </div>
-          </div>
       </div>
     </main>
   );

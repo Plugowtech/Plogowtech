@@ -1,0 +1,37 @@
+.charts__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.charts__section__title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.charts__section__title > div > h1 {
+    font-size: 24px;
+    color: #2e4a66;
+    margin-bottom: 5px;
+}
+
+
+.charts__section__title > div > p {
+    font-size: 14px;
+    font-weight: 700;
+    color: #a5aaad;
+}
+
+.charts__section__title > i {
+    color: #FFF;
+    font-size: 20px;
+    background: #FFC100;
+    border-radius: 200px 0px 200px 200px;
+    -moz-border-radius: 200px 0px 200px 200px;
+    -webkit-border-radius: 200px 0px 200px 200px;
+    border: 0px solid #000;
+    padding: 15px;
+}

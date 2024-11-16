@@ -118,7 +118,7 @@ main {
 }
 
 .charts__right__title > div > h1 {
-    font_size: 24px;
+    font-size: 24px;
     color: #2e4a66;
     margin_bottom: 5px;
 }
@@ -181,49 +181,52 @@ main {
     font-size: 14px;
 }
 
-.cards__analise__pedidos {
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    gap: 30px;
-    margin-top: 50px;
+
+
+
+
+
+
+
+
+/* Analise de pedidos */
+
+.pedidos_para_analise{
+    background: #FF9000;
+    margin-top: 2rem;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 13px #ededed, -5px -5px 13px #FFF;
 }
 
-.cards__analise__title {
+.pedidos_para_analise_title {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.cards__analise__title > div > h1 {
-    font_size: 24px;
-    color: #FF9000;
+.pedidos_para_analise_title > div > h1 {
+    font-size: 24px;
+    color: #FFF;
     margin_bottom: 5px;
-    padding: 15px;
 }
 
-.charts__left__title{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.cards__analise__title > div > p {
+.pedidos_para_analise_title > div > p {
     font-size: 14px;
-    color: #a5aaad;
+    color: #fff;
     font-weight: 700;
-    padding: 15px;
 }
 
-.card__analise {
+.pedidos_para_analise_cards {
     display: grid;
-    grid-template-colums: reapet(1);
+    grid-template-colums: reapet(2, 1fr);
     gap: 20px;
     margin-top: 30px;
 }
 
-.card1 {
-    background: #d1ecf1;
-    color: #35a4ba;
+.card_analise_01 {
+    background: #d6d8d9;
+    color: #3a3e41;
     text-align: center;
     padding: 25px;
     border-radius: 5px;
@@ -231,23 +234,47 @@ main {
 }
 
 
+
+
 @media only screen and (max-width: 855px){
+
     .main__cards {
-        grid-template-colums: 1fr;
+        grid-template-columns: 1fr;
         gap: 10px;
         margin-bottom: 0;
     }
 
-    .charts{
-        grid-template-colums: 1fr;
-        margin-top: 30px;
-        justify-content:center;
+    .charts {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        justify-content: center;
     }
 
     .charts__right__cards {
-        grid-template-column: 1fr;
+        grid-template-colums: 1fr;
         align-items: center;
         margin-top: 30px;
+    }
+
+    .pedidos_para_analise_title > div > h1 {
+        text-align:center;
+        line-height: 1.2;
+        font-size: 25px;
+    }
+    
+    .pedidos_para_analise_title > div > p {
+        padding-top: 10px;
+        text-align:center;
+        font-size: 14px;
+    }
+
+    .card_analise_01 > h1 {
+        background: #d6d8d9;
+        color: #3a3e41;
+        text-align: center;
+        padding: 25px;
+        border-radius: 5px;
+        font-size: 20px;
     }
 
 }
