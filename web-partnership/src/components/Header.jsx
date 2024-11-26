@@ -1,5 +1,5 @@
 import bgHeader from "../assets/bg-header.png";
-import Bag from '../assets/bag.svg'
+import Person from '../assets/imgHeader.svg'
 import { Link } from "react-router-dom";
 
 export const Header = () => {
@@ -18,38 +18,35 @@ export const Header = () => {
           clipPath: "polygon(0 0, 100% 0, 100% 85%, 0% 100%)",
         }}
       ></div>
-      <section className="w-full flex align-items-center justify-center">
-        <div className="container w-[60%] relative top-[180px] left-[70px] ">
-          <h1 className="text-[3.5rem] font-bold mb-6">
-            Bem-vindo ao{" "}
-            <span className="text-[var(--letter-color-secondary)]">
-              {" "}
-              PARTNERSHIP
-            </span>
+      <section className="w-full grid grid-cols-2 ml-24 mr-24">
+        <div className="w-[90%]  relative top-11 ">
+          <h1 className="text-[2.5rem] font-extrabold">
+            TRANSFORME{" "}
+            <span className="text-[var(--letter-color-secondary)]">PONTOS</span>{" "}
+            EM EXPERIÊNCIA
           </h1>
 
-          <p className="text-[1.3rem] mb-5">
+          <p className="text-[1.2rem]">
             <strong>PROFISSIONAIS</strong>: (Arquitetos, Engenheiros, Designers,
             Construtores, Paisagistas e outros);
           </p>
 
-          <div className="text-[2rem] w-[85%] ">
+          <div className="text-[1.3rem] w-[85%]  ">
             <p>
               O <strong>PARTNERSHIP</strong> é mais do que um programa de
-              recompensas; é uma experiência de fidelização pensada para
-              fortalecer parcerias entre profissionais, consultores e nossas
-              lojas parceiras.
+              recompensas; é uma<strong>experiência</strong> de fidelização
+              pensada para fortalecer <strong>parcerias</strong>.
             </p>
             <Link to="/choosing-account" className="w-full flex">
-               <button className="btn-home mt-5">Quero fazer parte</button>
+              <button className="btn-home mt-5">Quero fazer parte</button>
             </Link>
           </div>
         </div>
         <div className="relative">
           <img
-            src={Bag}
+            src={Person}
             alt="Mala de viagem"
-            className="relative size-[700px] right-10"
+            className="relative size-[85%]"
           />
         </div>
       </section>

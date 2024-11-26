@@ -3,6 +3,7 @@ import { InputImage } from "./InputImage";
 import { ReturnImag } from "./ReturnImag";
 import userProfile from "../assets/userProfile.jpg";
 import { useState } from "react";
+import Logo from "../assets/newMarkTwo.svg";
 
 export const PersonRegistration = () => {
   const [dataInput, setDataInput] = useState({
@@ -37,7 +38,11 @@ export const PersonRegistration = () => {
 
   return (
     <section className="bg-[var(--background-primary)] opacity-80 w-[600px] m-auto pt-7  flex flex-col justify-center items-center">
-      <div className="relative right-60">
+      <div>
+        <img src={Logo} alt="logo" className="relative right-[-200px]" />
+      </div>
+
+      <div className="relative left-[-200px] top-[-60px]">
         <ReturnImag rota="/" />
       </div>
       <h3 className="text-3xl font-bold">Cadastro</h3>

@@ -3,6 +3,7 @@ import { InputImage } from "./InputImage";
 import { ReturnImag } from "./ReturnImag";
 import logoPlaceholder from "../assets/logoPlaceholder.png";
 import { useState } from "react";
+import  Logo  from "../assets/newMarkTwo.svg";
 
 export const CompanyRegistration = () => {
   const [dataInput, setDataInput] = useState({
@@ -35,8 +36,12 @@ export const CompanyRegistration = () => {
   };
 
   return (
-    <section className="bg-[var(--background-primary)] opacity-80 w-[600px] m-auto pt-7  flex flex-col justify-center items-center">
-      <div className="relative right-60">
+    <section className="bg-[var(--background-primary)] rounded-2xl opacity-80 w-[600px] m-auto pt-7  flex flex-col justify-center items-center">
+      <div>
+        <img src={Logo} alt="logo" className="relative right-[-200px]" />
+      </div>
+
+      <div className="relative left-[-200px] top-[-60px]">
         <ReturnImag rota="/" />
       </div>
       <h3 className="text-3xl font-bold">Cadastro de Empresa</h3>
@@ -108,7 +113,7 @@ export const CompanyRegistration = () => {
           error={error}
         />
         <button className="btn-inputs">
-          {loading ? "Enviando ..." : "Entrar"}
+          {loading ? "Enviando ..." : "Finalizar cadastro"}
         </button>
       </form>
     </section>

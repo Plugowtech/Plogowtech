@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background-primary: #333;
+    --background-primary: #000;
     --background-secondary: #ff9000;
     --letter-color: #fff;
     --letter-color-secondary: #ff9000;
@@ -23,7 +23,8 @@
     @apply h-full w-full overflow-x-hidden antialiased;
     color: var(--letter-color);
     text-rendering: optimizeLegibility;
-    background-color: var(--background-primary)
+    background-color: var(--background-primary);
+
   }
 
   h1,
@@ -37,7 +38,7 @@
   }
 
   p{
-     @apply subpixel-antialiased tracking-wider leading-9 break-normal;
+     @apply subpixel-antialiased tracking-wider  break-normal;
   }
 
 

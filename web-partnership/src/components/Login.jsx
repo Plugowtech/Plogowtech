@@ -2,6 +2,7 @@ import { Input } from "./Input";
 import { AnimationLogin } from "../components/animations/AnimationLogin";
 import { ReturnImag } from "./ReturnImag";
 import { useState } from "react";
+import Logo from "../assets/newMarkTwo.svg";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -44,6 +45,13 @@ export const Login = () => {
   if (step === 1) {
     return (
       <section className="bg-[var(--background-primary)] z-10 w-[500px] h-[400px] m-auto mt-28 flex flex-col justify-center items-center">
+        <div>
+          <img
+            src={Logo}
+            alt="logo"
+            className="relative right-[-180px] top-12 size-10"
+          />
+        </div>
         <div className="relative top-12 right-48">
           <ReturnImag rota="/" />
         </div>
@@ -74,7 +82,6 @@ export const Login = () => {
           </div>
           <AnimationLogin classNameLogin="absolute inset-0 -z-10" />
         </form>
-        
       </section>
     );
   }
